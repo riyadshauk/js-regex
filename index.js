@@ -18,6 +18,7 @@ const matchRegex = line => {
   if (match) {
     const matchKeys = Object.keys(match).map(v => Number(v)).filter(key => !Number.isNaN(key)).sort((a, b) => a < b ? 1 : -1);
     console.log(match[matchKeys[0]]);
+    return match[matchKeys[0]];
   }
 };
 

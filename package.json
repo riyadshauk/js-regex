@@ -6,7 +6,6 @@
   "scripts": {
     "make-executable": "chmod +x ./bin/js-regex",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test1": "echo $1",
     "install": "chmod +x ./bin/js-regex && echo \"export PATH=\\$PATH:$(pwd)/bin\" >> ~/.bash_profile && echo \"export js_regex_path=$(pwd)\" >> ~/.bash_profile && source ~/.bash_profile"
   },
   "keywords": [
