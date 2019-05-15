@@ -1,0 +1,19 @@
+{
+  "name": "js-regex",
+  "version": "1.0.0",
+  "description": "This is a simple CLI tool for executing JavaScript-syntax regex in BASH.",
+  "main": "index.js",
+  "scripts": {
+    "make-executable": "chmod +x ./bin/js-regex",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "chmod +x ./bin/js-regex && echo \"export PATH=$PATH:$(pwd)/bin\" >> ~/.bash_profile && source ~/.bash_profile"
+  },
+  "keywords": [
+    "javascript",
+    "regex",
+    "bash",
+    "terminal"
+  ],
+  "author": "Riyad Shauk",
+  "license": "MIT"
+}

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# @author Riyad Shauk
+# An executable BASH wrapper to the script that has to be run via the `node` command.
+
+s_flag=''
+
+# https://stackoverflow.com/questions/7069682/how-to-get-arguments-with-flags-in-bash
+while getopts 's:v' flag; do
+  case "${flag}" in
+    s) s_flag='true' ;;
+    *)
+       exit 1 ;;
+  esac
+done
+
+regex=$2
+
+if [[ $s_flag == "" ]]
+then
+  echo "(If this script hangs, it is simply because you have not piped text to it. If you want to silence this message, provide the '-s' flag)"
+  echo
+  regex=$1
+fi
+
+# https://stackoverflow.com/questions/2746553/read-values-into-a-shell-variable-from-a-pipe#answer-12728818
+text=$(cat)
+echo $text | node ./index.js $regex
