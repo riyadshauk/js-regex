@@ -25,4 +25,4 @@ fi
 
 # https://stackoverflow.com/questions/2746553/read-values-into-a-shell-variable-from-a-pipe#answer-12728818
 text=$(cat)
-echo $text | node ./index.js $regex
+echo $text | node $js_regex_path/index.js $regex
